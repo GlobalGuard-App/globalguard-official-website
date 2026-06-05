@@ -17,12 +17,12 @@ export default function Contact() {
 
   return (
     <PageLayout>
-      <SEO title="Contact — GlobalGuard" description="Get in touch with the GlobalGuard team for support, partnerships, or general inquiries." />
+      <SEO title="Contact GlobalGuard — Support & Partnerships" description="Get in touch with the GlobalGuard team for support, partnerships, or general inquiries about our AI safety platform." canonical="/contact" />
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-dark-950" />
         <div className="absolute inset-0 opacity-40"><TacticalBackground variant="section" /></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <SectionHeader badge="Contact" title={<>Get in <span className="text-neon-blue">Touch</span></>} subtitle="Have a question or want to partner with us? We'd love to hear from you." />
+          <SectionHeader as="h1" badge="Contact" title={<>Get in <span className="text-neon-blue">Touch</span></>} subtitle="Have a question or want to partner with us? We'd love to hear from you." />
         </div>
       </section>
       <section className="py-8 pb-24">
@@ -31,9 +31,9 @@ export default function Contact() {
             {/* Contact info */}
             <div className="lg:col-span-2 space-y-4">
               {[
-                { icon: Mail, title: 'Email', value: 'hello@globalguard.app' },
-                { icon: MessageSquare, title: 'Support', value: 'support@globalguard.app' },
-                { icon: MapPin, title: 'Location', value: 'San Francisco, CA' },
+                { icon: Mail, title: 'Email', value: 'contact@globalguard.app' },
+                { icon: MessageSquare, title: 'Support', value: 'help@globalguard.app' },
+                { icon: MapPin, title: 'Platform', value: 'Global digital safety platform' },
                 { icon: Phone, title: 'Response', value: 'Within 24 hours' },
               ].map((c) => (
                 <GlowingCard key={c.title} color="blue" className="p-5 flex items-center gap-4">

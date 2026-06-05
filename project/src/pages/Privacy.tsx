@@ -9,16 +9,16 @@ const sections = [
   { title: 'Data Retention', content: 'Account data is retained for the duration of your subscription plus 30 days after cancellation, then permanently deleted. Emergency incident reports are retained for 90 days. You may request immediate deletion at any time.' },
   { title: 'Your Rights', content: 'You have the right to access, correct, export, and delete your personal data at any time. Submit requests via the app or email privacy@globalguard.app. We respond within 48 hours.' },
   { title: 'Third-Party Services', content: 'GlobalGuard uses minimal third-party services: cloud infrastructure (encrypted), payment processing (PCI-DSS compliant), and analytics (anonymized). All partners are contractually bound to our privacy standards.' },
-  { title: 'Contact', content: 'Privacy questions? Contact our Data Protection Officer at privacy@globalguard.app or write to GlobalGuard Inc., 123 Safety Ave, San Francisco, CA 94105.' },
+  { title: 'Contact', content: 'Privacy questions? Contact our Data Protection Officer at privacy@globalguard.app or reach us via the contact form at globalguard.app/contact.' },
 ];
 
 export default function Privacy() {
   return (
     <PageLayout>
-      <SEO title="Privacy Policy — GlobalGuard" description="GlobalGuard's commitment to your privacy and data protection." />
+      <SEO title="Privacy Policy — GlobalGuard" description="GlobalGuard's commitment to your privacy and data protection. Zero-knowledge architecture means your data stays yours, always." canonical="/privacy" noIndex={false} />
       <section className="pt-32 pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader badge="Legal" title="Privacy Policy" subtitle="Last updated: June 5, 2026" />
+          <SectionHeader as="h1" badge="Legal" title="Privacy Policy" subtitle="Last updated: June 5, 2026" />
           <div className="space-y-8">
             {sections.map((s) => (
               <div key={s.title} className="p-6 rounded-xl" style={{ background: 'rgba(10,14,23,0.5)', border: '1px solid rgba(0,212,255,0.07)' }}>

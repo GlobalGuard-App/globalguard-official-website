@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Twitter, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 import Logo from './Logo';
 
 const footerLinks = {
@@ -24,10 +24,8 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Mail, href: '#', label: 'Email' },
+  { icon: Github, href: 'https://github.com/GlobalGuard-App', label: 'GitHub' },
+  { icon: Mail, href: 'mailto:contact@globalguard.app', label: 'Email' },
 ];
 
 export default function Footer() {
