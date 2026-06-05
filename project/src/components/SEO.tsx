@@ -74,15 +74,20 @@ export default function SEO({
     setMeta('og:description', description, true);
     setMeta('og:type', ogType, true);
     setMeta('og:image', ogImage, true);
+    setMeta('og:image:width', '1200', true);
+    setMeta('og:image:height', '630', true);
+    setMeta('og:image:alt', fullTitle, true);
     setMeta('og:url', canonicalUrl, true);
     setMeta('og:locale', 'en_US', true);
 
     // Twitter Card
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:site', '@GlobalGuardApp');
+    setMeta('twitter:creator', '@GlobalGuardApp');
     setMeta('twitter:title', fullTitle);
     setMeta('twitter:description', description);
     setMeta('twitter:image', ogImage);
+    setMeta('twitter:image:alt', `${fullTitle} Screenshot`);
 
     // Theme color (mobile browser chrome)
     setMeta('theme-color', '#00d4ff');
