@@ -55,10 +55,10 @@ const comparisonRows = [
 ];
 
 const faqs = [
-  { q: 'Is there a free trial?', a: 'Yes, all premium plans come with a 30-day free trial. No credit card required for early access.' },
+  { q: 'Is there a free trial?', a: 'Yes, all premium plans include a 30-day free trial. No credit card required to get started.' },
   { q: 'Can I cancel anytime?', a: 'Absolutely. Cancel anytime with no questions asked. Your data is deleted immediately.' },
   { q: 'How does family sharing work?', a: 'Add up to 5 family members who each get their own full GlobalGuard account linked to your family plan.' },
-  { q: 'Is the app available now?', a: 'GlobalGuard is in early access. Sign up now to be first in line at launch.' },
+  { q: 'When will the app launch?', a: 'GlobalGuard is currently in active development. Sign up now to be notified at launch and receive priority access.' },
 ];
 
 function Check() {
@@ -73,13 +73,13 @@ export default function Pricing() {
 
   return (
     <PageLayout>
-      <SEO title="Pricing — GlobalGuard Safety Plans" description="Choose the GlobalGuard plan that fits your needs. Free to start, premium plans from $9.99/month." />
+      <SEO title="Pricing — GlobalGuard Safety Plans" description="Choose the GlobalGuard plan that fits your needs. Free tier available with essential safety features. Premium AI protection from $9.99/month." keywords="GlobalGuard pricing, safety app pricing, personal safety plan, AI security subscription" canonical="/pricing" />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-dark-950" />
         <div className="absolute inset-0 opacity-40"><TacticalBackground variant="section" /></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <SectionHeader badge="Pricing" title={<>Protection for <span className="text-neon-blue">Every Budget</span></>} subtitle="Start free. Upgrade when you need more. Cancel anytime." />
+          <SectionHeader as="h1" badge="Pricing" title={<>Protection for <span className="text-neon-blue">Every Budget</span></>} subtitle="Start free. Upgrade when you need more. Cancel anytime." />
         </div>
       </section>
 

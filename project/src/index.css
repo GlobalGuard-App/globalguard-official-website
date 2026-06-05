@@ -237,3 +237,250 @@
   0%   { transform: translate(-50%, -50%) scale(0); opacity: 0.8; }
   100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0; }
 }
+
+/* ── Extended Hero Background Animations ── */
+
+/* Neon energy waves */
+.hero-wave-1 {
+  animation: heroWaveSweep 18s ease-in-out infinite;
+}
+.hero-wave-2 {
+  animation: heroWaveSweep 24s ease-in-out infinite;
+  animation-delay: 6s;
+}
+.hero-wave-3 {
+  animation: heroWaveSweep 14s ease-in-out infinite;
+  animation-delay: 2s;
+}
+.hero-wave-4 {
+  animation: heroWaveGlow 20s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* Light fog animations */
+.hero-fog-1 {
+  animation: heroFogFloat1 22s ease-in-out infinite;
+}
+.hero-fog-2 {
+  animation: heroFogFloat2 28s ease-in-out infinite;
+  animation-delay: 8s;
+}
+.hero-fog-3 {
+  animation: heroFogFloat3 35s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* Hero text glow pulse */
+.hero-text-glow {
+  animation: heroTextGlow 10s ease-in-out infinite;
+}
+
+/* CTA light reflections */
+.hero-cta-glow {
+  animation: heroCTAGlow 8s ease-in-out infinite;
+}
+
+/* Extra beam */
+.hero-beam-3 {
+  animation: heroBeamFade 18s ease-in-out infinite;
+  animation-delay: 7s;
+}
+
+/* Thin radar ring variant */
+.hero-radar-ring--thin {
+  border-color: rgba(0, 212, 255, 0.08);
+  box-shadow: none;
+  animation-duration: 6s;
+}
+
+@keyframes heroWaveSweep {
+  0%   { transform: rotate(-4deg) translateX(-5%); opacity: 0; }
+  8%   { opacity: 1; }
+  45%  { transform: rotate(-2deg) translateX(3%); opacity: 0.8; }
+  80%  { transform: rotate(-5deg) translateX(-3%); opacity: 0.6; }
+  95%  { opacity: 0; }
+  100% { transform: rotate(-4deg) translateX(-5%); opacity: 0; }
+}
+
+@keyframes heroWaveGlow {
+  0%, 100% { opacity: 0; transform: rotate(-2deg) scaleX(0.9); }
+  20%       { opacity: 1; transform: rotate(-2deg) scaleX(1); }
+  60%       { opacity: 0.6; transform: rotate(-1deg) scaleX(1.05); }
+  85%       { opacity: 0; }
+}
+
+@keyframes heroFogFloat1 {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  25%  { transform: translate(-40px, 20px) scale(1.08); opacity: 1; }
+  50%  { transform: translate(20px, -30px) scale(0.95); opacity: 0.8; }
+  75%  { transform: translate(40px, 10px) scale(1.05); opacity: 0.9; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+}
+
+@keyframes heroFogFloat2 {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  30%  { transform: translate(30px, -25px) scale(1.1); opacity: 0.9; }
+  60%  { transform: translate(-20px, 20px) scale(0.92); opacity: 0.7; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+}
+
+@keyframes heroFogFloat3 {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  20%  { transform: translate(-30px, -20px) scale(1.06); opacity: 0.8; }
+  50%  { transform: translate(25px, 30px) scale(0.96); opacity: 0.65; }
+  80%  { transform: translate(-15px, -15px) scale(1.03); opacity: 0.75; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+}
+
+@keyframes heroTextGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes heroCTAGlow {
+  0%, 100% { opacity: 0.5; transform: scaleX(1); }
+  40%       { opacity: 1; transform: scaleX(1.1); }
+  70%       { opacity: 0.7; transform: scaleX(0.95); }
+}
+
+/* Additional scroll shimmer for scan line (existing animations kept) */
+@keyframes scanLine {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes borderGlow {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fadeInUpCSS {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animate-float used by phone mockup */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ── Mobile responsiveness & performance ── */
+
+/* Reduce blur-heavy effects on lower-powered devices */
+@media (max-width: 768px) {
+  .hero-bg-pulse,
+  .hero-bg-pulse-slow,
+  .hero-bg-drift,
+  .hero-fog-1,
+  .hero-fog-2,
+  .hero-fog-3 {
+    opacity: 0.6;
+  }
+  /* Reduce animation complexity on mobile */
+  .hero-wave-1,
+  .hero-wave-2,
+  .hero-wave-3,
+  .hero-wave-4 {
+    opacity: 0.4;
+  }
+}
+
+/* Prevent horizontal overflow globally */
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure hero section never causes horizontal scroll */
+.hero-overflow-guard {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Improved button focus states for accessibility */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: 2px solid rgba(0, 212, 255, 0.8);
+  outline-offset: 3px;
+}
+
+/* Improve text contrast for small text on dark backgrounds */
+.text-gray-600 {
+  --tw-text-opacity: 1;
+}
+
+/* Ensure gradient text never clips descenders */
+[style*="WebkitTextFillColor: transparent"],
+[style*="-webkit-text-fill-color: transparent"] {
+  padding-bottom: 0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Skip to main content for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: #00d4ff;
+  color: #060810;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 1rem;
+}
+
+/* Ensure phone mockup containers don't overflow on smaller lg screens */
+@media (max-width: 1150px) and (min-width: 1024px) {
+  .phone-mockup-container {
+    transform: scale(0.9);
+    transform-origin: right center;
+  }
+}
+
+/* Better focus indicator for nav links */
+a:focus-visible {
+  outline: 2px solid rgba(0, 212, 255, 0.7);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Performance: compositor layer hints for animated elements ── */
+.hero-bg-pulse,
+.hero-bg-pulse-slow,
+.hero-bg-drift,
+.hero-wave-1,
+.hero-wave-2,
+.hero-wave-3,
+.hero-wave-4,
+.hero-fog-1,
+.hero-fog-2,
+.hero-fog-3,
+.hero-beam-1,
+.hero-beam-2,
+.hero-beam-3,
+.hero-particle,
+.hero-radar-ring,
+.hero-text-glow,
+.hero-cta-glow {
+  will-change: transform, opacity;
+  contain: layout style;
+}
+
+/* Prevent paint outside hero */
+.hero-bg-container {
+  isolation: isolate;
+  contain: layout style paint;
+}

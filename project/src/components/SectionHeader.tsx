@@ -6,9 +6,11 @@ interface SectionHeaderProps {
   title: ReactNode;
   subtitle?: string;
   center?: boolean;
+  /** Render the title as h1 for page heroes, h2 for sections (default: h2) */
+  as?: 'h1' | 'h2';
 }
 
-export default function SectionHeader({ badge, title, subtitle, center = true }: SectionHeaderProps) {
+export default function SectionHeader({ badge, title, subtitle, center = true, as: Tag = 'h2' }: SectionHeaderProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -31,7 +33,7 @@ export default function SectionHeader({ badge, title, subtitle, center = true }:
           </span>
         </div>
       )}
-      <h2 className="section-title mb-4">{title}</h2>
+      <Tag className="section-title mb-4">{title}</Tag>
       {subtitle && (
         <p className={`section-subtitle ${center ? 'mx-auto' : ''}`}>{subtitle}</p>
       )}

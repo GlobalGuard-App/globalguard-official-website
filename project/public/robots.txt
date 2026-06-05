@@ -1,0 +1,14 @@
+# GlobalGuard — https://globalguard.app
+User-agent: *
+Allow: /
+
+# Disallow utility/internal paths
+Disallow: /api/
+Disallow: /_/
+Disallow: /admin/
+
+# Crawl delay (optional, be polite)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://globalguard.app/sitemap.xml

@@ -29,7 +29,9 @@ export default function AIGuardian() {
     <PageLayout>
       <SEO
         title="AI Guardian — GlobalGuard Intelligent Threat Detection"
-        description="GlobalGuard's AI Guardian uses machine learning to predict, detect, and neutralize threats before they reach you."
+        description="GlobalGuard's AI Guardian uses machine learning to predict, detect, and neutralise threats before they reach you. 24/7 real-time protection powered by AI."
+        keywords="AI threat detection, personal safety AI, AI guardian app, intelligent security, GlobalGuard AI"
+        canonical="/ai-guardian"
       />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -40,6 +42,7 @@ export default function AIGuardian() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <SectionHeader
+              as="h1"
               badge="AI Guardian"
               title={<>Intelligent Protection That <span className="text-neon-blue">Never Sleeps</span></>}
               subtitle="Our AI guardian uses machine learning, behavioral analysis, and global threat intelligence to keep you safe 24/7."
@@ -97,10 +100,10 @@ export default function AIGuardian() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {[
-              { value: '50M+', label: 'Threats Blocked Monthly' },
-              { value: '99.7%', label: 'Detection Accuracy' },
-              { value: '<100ms', label: 'Alert Latency' },
-              { value: '1M+', label: 'Users Protected' },
+              { value: 'AES-256', label: 'Encryption Standard' },
+              { value: 'Zero-K', label: 'Privacy Architecture' },
+              { value: '195+', label: 'Countries Supported' },
+              { value: '24/7', label: 'AI Monitoring' },
             ].map((stat) => (
               <div key={stat.label} className="rounded-xl p-5" style={{ background: 'rgba(0,212,255,0.04)', border: '1px solid rgba(0,212,255,0.1)' }}>
                 <p className="text-2xl font-bold text-neon-blue mb-1">{stat.value}</p>

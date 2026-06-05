@@ -15,29 +15,29 @@ const values = [
 ];
 
 const team = [
-  { name: 'Alexandra Chen', role: 'CEO & Co-Founder', bio: 'Former NSA analyst and cybersecurity researcher with 15 years in threat intelligence.' },
-  { name: 'Marcus Webb', role: 'CTO & Co-Founder', bio: 'Ex-Google AI engineer who led safety systems for 2B+ users.' },
-  { name: 'Dr. Priya Sharma', role: 'Chief AI Officer', bio: 'PhD in Machine Learning from MIT. Published 30+ papers on predictive threat modeling.' },
-  { name: 'James Okafor', role: 'Head of Security', bio: 'Former special forces with expertise in global security operations and emergency response.' },
+  { name: 'A. Chen', role: 'CEO & Co-Founder', bio: 'Security researcher and former threat intelligence analyst with deep expertise in AI-driven safety systems.' },
+  { name: 'M. Webb', role: 'CTO & Co-Founder', bio: 'Software architect specialising in privacy-first mobile platforms and real-time distributed safety infrastructure.' },
+  { name: 'Dr. P. Sharma', role: 'Chief AI Officer', bio: 'Machine learning researcher focused on predictive threat modelling and anomaly detection for consumer safety.' },
+  { name: 'J. Okafor', role: 'Head of Security', bio: 'Veteran security operations professional with expertise in emergency response protocols and global threat landscapes.' },
 ];
 
 const achievements = [
-  { value: '1M+', label: 'Users Protected' },
-  { value: '195+', label: 'Countries' },
-  { value: '50M+', label: 'Threats Blocked' },
-  { value: '99.9%', label: 'Uptime' },
+  { value: '195+', label: 'Countries Supported' },
+  { value: 'AES-256', label: 'Encryption Standard' },
+  { value: 'Zero-K', label: 'Privacy Architecture' },
+  { value: '24/7', label: 'AI Monitoring' },
 ];
 
 export default function About() {
   return (
     <PageLayout>
-      <SEO title="About — GlobalGuard AI Safety Company" description="Learn about GlobalGuard's mission to make personal safety accessible to everyone through AI." />
+      <SEO title="About GlobalGuard — AI Safety Company" description="Learn about GlobalGuard's mission: making AI-powered personal safety accessible to everyone, everywhere." keywords="GlobalGuard company, AI safety technology, personal protection platform" canonical="/about" />
 
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-dark-950" />
         <div className="absolute inset-0 opacity-40"><TacticalBackground variant="section" /></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <SectionHeader badge="About Us" title={<>Built by Security Experts, <span className="text-neon-blue">For Everyone</span></>} subtitle="We're on a mission to democratize access to world-class personal safety technology." />
+          <SectionHeader as="h1" badge="About Us" title={<>Built by Security Experts, <span className="text-neon-blue">For Everyone</span></>} subtitle="We're on a mission to democratize access to world-class personal safety technology." />
         </div>
       </section>
 

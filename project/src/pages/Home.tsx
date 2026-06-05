@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
   Shield, Brain, AlertTriangle, Globe, Wifi, MapPin,
   ChevronRight, Lock, Radio, Eye, Heart,
-  ArrowRight, CheckCircle2, Star, Cpu,
+  ArrowRight, CheckCircle2, Cpu,
   Smartphone, QrCode, Download, Sparkles
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -28,12 +28,12 @@ const howItWorks = [
 ];
 
 const whyGlobalGuard = [
-  'Military-grade encryption for all personal data',
-  'AI learns your patterns to predict threats',
+  'Military-grade AES-256 encryption for all personal data',
+  'AI learns threat patterns to protect you proactively',
   'Works offline in emergency situations',
-  'Trusted by security professionals worldwide',
+  'Built for modern security threats and emergencies',
   'Zero-knowledge architecture — your data stays yours',
-  'Sub-second SOS alert delivery',
+  'Offline emergency mode activates automatically',
 ];
 
 const faqs = [
@@ -59,13 +59,14 @@ export default function Home() {
   return (
     <PageLayout>
       <SEO
-        title="GlobalGuard — AI-Powered Personal Safety Guardian"
-        description="Your AI Safety Guardian, Anywhere in the World. Personal safety, SOS alerts, live security intelligence, cyber safety, and emergency help in one AI-powered app."
-        keywords="personal safety app, AI guardian, SOS protection, emergency alerts, cyber safety, live security intelligence"
+        title="GlobalGuard — AI-Powered Personal Safety App"
+        description="Your AI Safety Guardian, anywhere in the world. Personal safety, SOS alerts, live security intelligence, cyber safety, and emergency help — all in one AI-powered app."
+        keywords="AI safety app, emergency protection app, cyber safety platform, SOS security app, personal protection AI, GlobalGuard AI, personal safety guardian"
+        canonical="/"
       />
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden" style={{ minHeight: '100svh' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: '100svh' }} aria-label="Hero — AI-Powered Personal Safety">
         {/* Premium animated background — all layers in one component */}
         <HeroBackground />
 
@@ -101,7 +102,7 @@ export default function Home() {
               </motion.div>
 
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.08] tracking-tight mb-5">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-5 overflow-visible">
                 Your AI Safety{' '}
                 <span
                   style={{
@@ -109,6 +110,8 @@ export default function Home() {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
+                    paddingBottom: '0.05em',
+                    display: 'inline',
                   }}
                 >
                   Guardian
@@ -151,7 +154,7 @@ export default function Home() {
                       <p className="text-[9px] text-gray-500 uppercase tracking-wider leading-none">Download on the</p>
                       <p className="text-xs font-semibold text-white leading-tight">App Store</p>
                     </div>
-                    <span className="text-[9px] text-neon-blue/60 font-mono ml-1 flex-shrink-0">Soon</span>
+                    <span className="text-[9px] text-neon-blue/50 font-mono ml-1 flex-shrink-0 px-1.5 py-0.5 rounded" style={{border:'1px solid rgba(0,212,255,0.15)'}}>Coming</span>
                   </a>
                   <a
                     href="#"
@@ -166,7 +169,7 @@ export default function Home() {
                       <p className="text-[9px] text-gray-500 uppercase tracking-wider leading-none">GET IT ON</p>
                       <p className="text-xs font-semibold text-white leading-tight">Google Play</p>
                     </div>
-                    <span className="text-[9px] text-neon-blue/60 font-mono ml-1 flex-shrink-0">Soon</span>
+                    <span className="text-[9px] text-neon-blue/50 font-mono ml-1 flex-shrink-0 px-1.5 py-0.5 rounded" style={{border:'1px solid rgba(0,212,255,0.15)'}}>Coming</span>
                   </a>
                   <div
                     className="hidden md:flex items-center gap-3 px-4 py-2.5 rounded-xl"
@@ -187,7 +190,7 @@ export default function Home() {
 
               {/* Trust badges */}
               <div className="flex flex-wrap items-center gap-5">
-                {['Free to start', '195+ countries', 'Works offline'].map((t) => (
+                {['Privacy First', 'AI-Powered Protection', 'Offline Emergency Support'].map((t) => (
                   <div key={t} className="flex items-center gap-1.5">
                     <CheckCircle2 size={14} className="text-neon-green flex-shrink-0" />
                     <span className="text-xs text-gray-500">{t}</span>
@@ -511,10 +514,10 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '195+', label: 'Countries' },
-                  { value: '<1s', label: 'SOS Response' },
-                  { value: '256-bit', label: 'Encryption' },
-                  { value: '99.9%', label: 'Uptime' },
+                  { value: '195+', label: 'Countries Supported' },
+                  { value: 'AES-256', label: 'Encryption Standard' },
+                  { value: 'Zero-K', label: 'Architecture' },
+                  { value: '24/7', label: 'AI Monitoring' },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -534,34 +537,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== TESTIMONIALS ===== */}
+      {/* ===== TRUST PILLARS ===== */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-dark-900/30" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Testimonials"
-            title={<>Trusted by <span className="text-neon-blue">Thousands</span></>}
-            subtitle="Real people, real protection, real peace of mind."
+            badge="Our Principles"
+            title={<>Built on <span className="text-neon-blue">Trust &amp; Transparency</span></>}
+            subtitle="Every design decision starts with one question: does this make you safer?"
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { name: 'Sarah K.', role: 'Travel Journalist', text: 'GlobalGuard gave me confidence to travel solo through 30+ countries. The SOS feature is a lifesaver — literally.', color: 'blue' as const },
-              { name: 'Marcus R.', role: 'Cybersecurity Analyst', text: "As a security professional, I can say GlobalGuard's encryption and threat detection rival enterprise solutions.", color: 'green' as const },
-              { name: 'Priya M.', role: 'Working Parent', text: 'The nearby help feature helped me find a hospital at 2 AM when my child had an emergency. I will never be without it.', color: 'blue' as const },
-            ].map((t) => (
-              <GlowingCard key={t.name} color={t.color} className="p-6">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, j) => (
-                    <Star key={j} size={12} className="text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-sm text-gray-400 leading-relaxed mb-6 italic">"{t.text}"</p>
-                <div>
-                  <p className="text-sm font-semibold text-white">{t.name}</p>
-                  <p className="text-xs text-gray-600">{t.role}</p>
-                </div>
-              </GlowingCard>
-            ))}
+            <GlowingCard color="blue" className="p-6">
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-neon-blue/10 border border-neon-blue/20">
+                <Lock size={20} className="text-neon-blue" />
+              </div>
+              <h3 className="text-base font-semibold text-white mb-2">Privacy First</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">Zero-knowledge architecture means your data is encrypted before it leaves your device. We cannot access it — ever.</p>
+            </GlowingCard>
+            <GlowingCard color="green" className="p-6">
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-neon-green/10 border border-neon-green/20">
+                <Brain size={20} className="text-neon-green" />
+              </div>
+              <h3 className="text-base font-semibold text-white mb-2">AI-Powered Protection</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">Continuously learning threat models analyse your environment in real time — proactive alerts before danger escalates.</p>
+            </GlowingCard>
+            <GlowingCard color="blue" className="p-6">
+              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 bg-neon-blue/10 border border-neon-blue/20">
+                <Shield size={20} className="text-neon-blue" />
+              </div>
+              <h3 className="text-base font-semibold text-white mb-2">Real-Time Safety Intelligence</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">Live security feeds from 195+ countries give you the most current threat awareness, wherever you are in the world.</p>
+            </GlowingCard>
           </div>
         </div>
       </section>
@@ -619,10 +625,10 @@ export default function Home() {
               Ready to Feel Safe Everywhere?
             </h2>
             <p className="text-gray-500 mb-8 relative z-10">
-              Join thousands who trust GlobalGuard as their AI safety guardian. Early access is free.
+              GlobalGuard is coming soon. Sign up now to get priority access and be first protected when we launch.
             </p>
             <div className="flex flex-wrap gap-4 justify-center relative z-10">
-              <Link to="/pricing" className="btn-primary">Get Early Access</Link>
+              <Link to="/pricing" className="btn-primary">Get Priority Access</Link>
               <Link to="/contact" className="btn-secondary">Contact Us</Link>
             </div>
           </div>

@@ -87,11 +87,11 @@ export default function Footer() {
           ))}
         </div>
         <div className="pt-8 border-t border-neon-blue/06 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-500">
             &copy; {new Date().getFullYear()} GlobalGuard. All rights reserved.
           </p>
-          <p className="text-xs text-gray-700 font-mono">
-            Protecting humans worldwide
+          <p className="text-xs font-mono" style={{ color: 'rgba(0,212,255,0.4)' }}>
+            Privacy-first · AI-powered · Built for everyone
           </p>
         </div>
 
